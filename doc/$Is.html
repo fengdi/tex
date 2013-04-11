@@ -1,0 +1,37 @@
+<div class="entry method" id="css1">
+<h2 class="title">
+<span class="name">$Is 对象</span>
+</h2>
+<div class="desc">
+<p><strong>介绍：提供一些对类型的检测的方法</strong></p>
+<p><strong>方法：</strong></p>
+<ul>
+	<li>Boolen <a href="#String">String(mix m)</a></li>
+	<li>Boolen <a href="#Function">Function(mix m)</a></li>
+	<li>Boolen <a href="#Object">Object(mix m)</a></li>
+	<li>Boolen <a href="#Number">Number(mix m)</a></li>
+    <li>Boolen <a href="#Array">Array(mix m)</a></li>
+    <li>Boolen <a href="#EmptyObject">EmptyObject(mix m)</a></li>
+    <li>Boolen <a href="#PlainObject">PlainObject(mix m)</a></li>
+    <li>String <a href="#getType">getType(mix m)</a></li>
+</ul>
+</div>
+<dl>
+	<dt id="String">Boolen <a href="#String">String(mix m)</a></dt>
+    <dd>检测是否为字符串</dd>
+	<dt id="Function">Boolen <a href="#Function">Function(mix m)</a></dt>
+    <dd>检测是否为方法</dd>
+    <dt id="Object">Boolen <a href="#Object">Object(mix m)</a></dt>
+    <dd>检测是否为对象</dd>
+    <dt id="Number">Boolen <a href="#Number">Number(mix m)</a></dt>
+    <dd>检测是否为数字</dd>
+    <dt id="Array">Boolen <a href="#Array">Array(mix m)</a></dt>
+    <dd>检测是否为数组</dd>
+    <dt id="EmptyObject">Boolen <a href="#EmptyObject">EmptyObject(mix m)</a></dt>
+    <dd>检测是否为空对象（不包含任何属性）。如：$Is.isEmptyObject({}) // true  $Is.isEmptyObject({ foo: "bar" }) // false</dd>
+    <dt id="PlainObject">Boolen <a href="#PlainObject">PlainObject(mix m)</a></dt>
+    <dd>测试对象是否是纯粹的对象（通过 "{}" 或者 "new Object" 创建的）。如：$Is.isPlainObject({}) // true $Is.isPlainObject("test") // false</dd>
+    <dt id="String">Boolen <a href="#String">String(mix m)</a></dt>
+    <dd>返回该类型的字符串。 如： $Is.getType(190);  //Number</dd>
+</dl>
+</div>

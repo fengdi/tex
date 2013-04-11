@@ -1,0 +1,71 @@
+<div class="entry method" id="css1">
+<h2 class="title">
+<span class="name">$Anim 方法</span>
+</h2>
+<div class="desc">
+<p><strong>介绍：返回一个Fx的实例(动画对象)</strong></p>
+<p><strong>方法：</strong></p>
+<ul>
+	<li>Fx <a href="#String">$Anim(Element el,[Object events])</a></li>
+</ul>
+</div>
+<h2 class="title">
+<span class="name">Fx对象</span>
+</h2>
+<div class="desc">
+<p><strong>介绍：提供一些动画方法，可以灵活地构建复杂的动画效果</strong></p>
+<p><strong>方法：</strong></p>
+<ul>
+	<li>Fx <a href="#add">add(Action act)</a></li>
+    <li>Fx <a href="#start">start()</a></li>
+    <li>Fx <a href="#restart">restart()</a></li>
+    <li>Fx <a href="#delay">delay(Number time)</a></li>
+    <li>Fx <a href="#pause">pause()</a></li>
+    <li>Fx <a href="#resume">resume()</a></li>
+    <li>Fx <a href="#stop">stop(String pos)</a></li>
+    <li>ArrayActions <a href="#getQueue">getQueue()</a></li>
+    <li>Element <a href="#getElement">getElement()</a></li>
+</ul>
+</div>
+
+<dl>
+	<dt id="add">Fx <a href="#add">add(Action act)</a></dt>
+    <dd>
+    <p>为Fx添加一个动作。通过链式方法可以同时添加多个动作。</p>
+    <p>Action 动作对象的格式为：</p>
+    <p><pre><code>
+var act = {
+    to:{                                //动画目标样式  可略
+        left:500,
+        top:400,
+        opacity:0.8,
+        width:150,
+        height:30
+    },
+    onQueueStart:function(fx,el){},    //动作开始时事件 可略
+    onQueueComplete:function(fx,el){}, //动作结束时事件 可略
+    transition:easing.linear,          //动作哈希渐变方法 可略
+    delay:500,                         //执行动作前等待时间(毫秒) 可略
+    duration:2000,                     //执行动作所需时间(毫秒) 可略
+};
+        <code></pre>
+    </p>
+    </dd>
+    <dt id="start">Fx <a href="#start">start()</a></dt>
+    <dd>开始动画</dd>
+    <dt id="restart">Fx <a href="#restart">restart()</a></dt>
+    <dd>重新开始动画</dd>
+    <dt id="delay">Fx <a href="#delay">delay(Number time)</a></dt>
+    <dd>等待一定时间开始动画</dd>
+    <dt id="pause">Fx <a href="#pause">pause()</a></dt>
+    <dd>暂停动画</dd>
+    <dt id="resume">Fx <a href="#resume">resume()</a></dt>
+    <dd>恢复暂停继续动画</dd>
+    <dt id="stop">Fx <a href="#stop">stop(String pos)</a></dt>
+    <dd>停止动画 参数：stop("start")停止到开始位置；stop("end")停止到结束位置；stop("astart")停止到当前动作的开始位置；stop("aend")停止到当前动作的结束位置；</dd>
+    <dt id="getQueue">ArrayActions <a href="#getQueue">getQueue()</a></dt>
+    <dd>获取该动画的动作队列(数组)</dd>
+    <dt id="getElement">Element <a href="#getElement">getElement()</a></dt>
+    <dd>获取动画的标记</dd>
+</dl>
+</div>

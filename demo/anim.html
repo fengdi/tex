@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>动画demo</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+</style>
+<script type="text/javascript" src="../src/Tex1.0.9.min.js"></script>
+<script type="text/javascript">
+$DOM.ready(function(){
+//window.onload = function(){
+	var at1 = {
+			to:{
+				left:0,
+				top:400,
+				width:80,
+				height:80
+			},
+			delay:1000,
+			duration:3000
+		};
+	var at2 = {
+			to:{
+				left:500,
+				top:400,
+				opacity:0.8,
+				width:150,
+				height:30
+			},
+			delay:500,
+			duration:2000
+		};
+	var at3 = {
+		to:{
+			left:500,
+			top:0,
+			opacity:0.5,
+			width:120,
+			height:150
+		},
+		delay:0,
+		duration:1500
+	};
+	var at4 = {
+		to:{
+			left:0,
+			top:0,
+			opacity:1,
+			width:100,
+			height:100
+		},
+		delay:500,
+		duration:3000
+	};
+	var test = document.getElementById("test");
+	var s = $Anim(test,{
+						whileAnim:function(n){},
+						onEnd:function(){
+							this.restart();
+						}
+					}
+			).add(at1).add(at2).add(at3).add(at4).start();
+
+	
+	var pause = document.getElementById("pause");
+	var resume = document.getElementById("resume");
+	var stop = document.getElementById("stop");
+	var start = document.getElementById("start");
+	var restart = document.getElementById("restart");
+	
+	
+	pause.onclick = function(){
+		s.pause();
+	};
+	resume.onclick = function(){
+		s.resume();
+	};
+	stop.onclick = function(){
+		s.stop();
+	};
+	start.onclick = function(){
+		s.start();
+	};
+	restart.onclick = function(){
+		s.restart();
+	};
+	
+	//alert(test.style.visibility);
+	//alert(window.$DOM.$one("#test").innerHTML);
+//}
+});
+</script>
+</head>
+
+<body>
+<div></div>
+<div id="test" class="aa" style=" position:absolute; top:0px; height:0px; width:100px; height:100px; background-color:#9C3; border-radius:5px;">
+A
+</div>
+<br/>
+<br/><br/>
+<br/>
+<br/><br/>
+<br/>
+<br/><br/>
+<br/>
+<br/>
+<br/>
+<input type="button" id="pause" value="pause" />
+<input type="button" id="resume" value="resume" />
+<input type="button" id="stop" value="stop" />
+<input type="button" id="start" value="start" />
+<input type="button" id="restart" value="restart" />
+</body>
+</html>

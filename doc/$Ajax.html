@@ -1,0 +1,40 @@
+<div class="entry method" id="css1">
+<h2 class="title">
+<span class="name">$Ajax 对象</span>
+</h2>
+<div class="desc">
+<p><strong>介绍：对原生的XHR封装</strong></p>
+<p><strong>方法：</strong></p>
+<ul>
+	<li>void <a href="#jsonp">jsonp(String url,Object|String data,Function callback)</a></li>
+	<li>void <a href="#get">get(String url,[Object|String data,[Function callback],[String format]])</a></li>
+	<li>void <a href="#post">post(String url,[Object|String data,[Function callback],[String format]])</a></li>
+	<li>void <a href="#ajax">ajax(String url,Object options)</a></li>
+</ul>
+</div>
+<dl>
+	<dt id="jsonp">void <a href="#jsonp">jsonp(String url,Object|String data,Function callback)</a></dt>
+    <dd>用于jsonp跨域传输</dd>
+	<dt id="get">void <a href="#get">get(String url,[Object|String data,[Function callback],[String format]])</a></dt>
+    <dd>get方式的ajax请求</dd>
+	<dt id="post">void <a href="#post">post(String url,[Object|String data,[Function callback],[String format]])</a></dt>
+    <dd>post方式的ajax请求</dd>
+    <dt id="ajax">void <a href="#ajax">ajax(String url,Object options)</a></dt>
+    <dd>底层 AJAX 实现。简单易用的高层实现见 $Ajax.get, $Ajax.post 等。$Ajax.ajax() 返回其创建的 XMLHttpRequest 对象。大多数情况下你无需直接操作该函数，除非你需要操作不常用的选项，以获得更多的灵活性。 
+    <p>
+	<pre><code>
+    $Ajax.ajax(url,{
+      method:     'get',
+      async:      true,
+      data:       null,
+      format:     'text',
+      encode:     'UTF-8',
+      success:   function(){},
+      failure:   function(){},
+			whatever: function(){}
+    });
+    </code></pre>
+</p>
+    </dd>
+</dl>
+</div>

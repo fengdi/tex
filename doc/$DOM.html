@@ -1,0 +1,90 @@
+<div class="entry method" id="css1">
+<h2 class="title">
+<span class="name">$DOM 对象</span>
+</h2>
+<script type="text/javascript">
+document.getElementById()
+</script>
+<div class="">
+<p class="desc"><strong>介绍：对DOM一些常用操作的扩展</strong></p>
+<p class="desc"><strong>方法：</strong></p>
+<ul>
+	<li>Element <a href="#$id">$id(String id)</a></li>
+	<li>ArrayElements <a href="#$name">$name(String name,[Element parent])</a></li>
+	<li>ArrayElements <a href="#$tag">$tag(String tagName,[Element parent])</a></li>
+	<li>ArrayElements <a href="#$class">$class(String className,[String tag, [Element parent]])</a></li>
+	<li>ArrayElements <a href="#$attr">$attr(String search,[Element parent])</a></li>
+	<li>Element <a href="#$one">$one(String selector,[Element parent])</a></li>
+	<li>ArrayElements <a href="#$all">$all(String selector,[Element parent])</a></li>
+	<li>void <a href="#ready">ready(Function fn)</a></li>
+	<li>mix <a href="#attr">attr(Element el,String name,[mix value])</a></li>
+    <li>Element <a href="#removeAttr">removeAttr(Element el,String name)</a></li>
+	<li>mix <a href="#prop">prop(Element el,String name,[mix value])</a></li>
+	<li>String[void] <a href="#css">css(Element el,String name,[mix value])</a></li>
+    <li>Element <a href="#removeCss">removeCss(Element el,String name)</a></li>
+	<li>String[void] <a href="#text">text(Element el,[mix value])</a></li>
+	<li>String[void] <a href="#html">html(Element el,[mix value])</a></li>
+	<li>String[void] <a href="#val">val(Element el,[mix value])</a></li>
+    <li>Element <a href="#show">show(Element el,[mix display])</a></li>
+    <li>Element <a href="#hide">hide(Element el)</a></li>
+    <li>Element <a href="#toggle">toggle(Element el)</a></li>
+    <li>Boolen <a href="#hasClass">hasClass(Element el,String name)</a></li>    
+    <li>Element <a href="#addClass">addClass(Element el,String name)</a></li>
+    <li>Element <a href="#removeClass">removeClass(Element el,String name)</a></li>
+</ul>
+</div>
+<dl>
+	<dt id="$id">Element <a href="#$id">$id(String id)</a></dt>
+    <dd>类似于document.getElementById</dd>
+	<dt id="$name">ArrayElements <a href="#$name">$name(String name,[Element parent])</a></dt>
+    <dd>类似于document.getElementsByName</dd>
+	<dt id="$tag">ArrayElements <a href="#$tag">$tag(String tagName,[Element parent])</a></dt>
+    <dd>类似于document.getElementsByTagName</dd>
+	<dt id="$class">ArrayElements <a href="#$class">$class(String className,[String tag, [Element parent]])</a></dt>
+    <dd>通过class类名获得标记，类似于document.getElementsByClassName</dd>
+  <dt id="$attr">ArrayElements <a href="#$attr">$attr(String search,[Element parent])</a></dt>
+    <dd><p>通过标记属性值获得标记</p> <p><ul>
+<li>[Attr] 或者tagName[Attr]	选择具有此属性的元素	blockquote[title]</li>
+<li>[Attr="value"] 或者tagName[Attr="value"]	选出属性值精确等于给出值的元素	h2[align="left"]</li>
+<li>[Attr^="value"] 或者tagName[Attr^="value"]	选出属性值以给出值开头的元素	h2[align^="right"]</li>
+<li>[Attr$="value"] 或者tagName[Attr$="value"]	选出属性值以给出值结尾的元素	div[class$="vml"]</li>
+<li>[Attr*="value"] 或者tagName[Attr*="value"]	选出属性值包含给出值的元素	div[class*="grid"]</li>
+<li>[Attr~="value"] 或者tagName[Attr~="value"]	原元素的属性值为多个单词，给出值为其中一个。	li[class~="last"]</li>
+<li>[Attr|="value"] 或者tagName[Attr|="value"]	原元素的属性值等于给出值，或者以给出值加“-”开头	span[lang|="en"]</li>
+<li>[Attr!="value"] 或者tagName[Attr!="value"]  反选属性值选择器	</li></ul></p></dd>
+	<dt id="$one">Element <a href="#$one">$one(String selector,[Element parent])</a></dt>
+    <dd>通过CSS选择器获得标记，只返回第一个匹配的元素，不支持IE8以下浏览器</dd>
+	<dt id="$all">ArrayElements <a href="#$all">$all(String selector,[Element parent])</a></dt>
+    <dd>通过CSS选择器获得标记，只返回所有匹配的元素，不支持IE8以下浏览器</dd>
+	<dt id="ready">void <a href="#ready">ready(Function fn)</a></dt>
+    <dd>添加方法，当Dom加载完成执行，可以添加多个方法</dd>
+	<dt id="attr">mix <a href="#attr">attr(Element el,String name,[mix value])</a></dt>
+    <dd>获取[设置]标记HTML的属性</dd>
+    <dt id="removeAttr">Element <a href="#removeAttr">removeAttr(Element el,String name)</a></dt>
+    <dd>删除标记的指定属性</dd>
+    <dt id="prop">mix <a href="#prop">prop(Element el,String name,[mix value])</a></dt>
+    <dd>获取[设置]标记DOM对象指定的的属性</dd>
+    <dt id="css">String[void] <a href="#css">css(Element el,String name,[mix value])</a></dt>
+    <dd>获取[设置]标记指定的CSS样式</dd>
+    <dt id="removeCss">Element <a href="#removeCss">removeCss(Element el,String name)</a></dt>
+    <dd>删除标记指定的CSS样式</dd>
+    <dt id="text">String[void] <a href="#text">text(Element el,[mix value])</a></dt>
+    <dd>获取[设置]标记的文本(节点)</dd>
+    <dt id="html">String[void] <a href="#html">html(Element el,[mix value])</a></dt>
+    <dd>获取[设置]标记的innerHTML</dd>
+    <dt id="val">String[void] <a href="#val">val(Element el,[mix value])</a></dt>
+    <dd>获取[设置]标记的值</dd>
+    <dt id="show">Element <a href="#show">show(Element el,[mix display])</a></dt>
+    <dd>显示标记，可以设置以什么方式显示(参照display样式)</dd>
+    <dt id="hide">Element <a href="#hide">hide(Element el)</a></dt>
+    <dd>隐藏标记</dd>
+    <dt id="toggle">Element <a href="#toggle">toggle(Element el)</a></dt>
+    <dd>切换显示/隐藏标记</dd>
+    <dt id="hasClass">Boolen <a href="#hasClass">hasClass(Element el,String name)</a></dt>
+    <dd>返回标记是否有指定的class样式</dd>
+    <dt id="addClass">Element <a href="#addClass">addClass(Element el,String name)</a></dt>
+    <dd>为标记添加指定的class样式</dd>
+    <dt id="removeClass">Element <a href="#removeClass">removeClass(Element el,String name)</a></dt>
+    <dd>为标记删除指定的class样式</dd>
+</dl>
+</div>

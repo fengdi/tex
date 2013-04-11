@@ -1,0 +1,64 @@
+<div class="entry method" id="css1">
+<h2 class="title">
+<span class="name">$String 对象</span>
+</h2>
+
+<div class="">
+<p class="desc"><strong>介绍：对原生的String一些扩展</strong></p>
+<p class="desc"><strong>方法：</strong></p>
+<ul>
+	<li>String <a href="#trim">trim(String str)</a></li>
+	<li>String <a href="#escapeHTML">escapeHTML(String str)</a></li>
+	<li>String <a href="#unescapeHTML">unescapeHTML(String str)</a></li>
+	<li>Nunmber <a href="#byteLength">byteLength(String str)</a></li>
+	<li>String <a href="#delLast">delLast(String str)</a></li>
+	<li>Nunmber <a href="#toInt">toInt(String str)</a></li>
+	<li>Array <a href="#toArray">toArray(String str,[String split])</a></li>
+	<li>String <a href="#left">left(String str)</a></li>
+	<li>String <a href="#right">right(String str)</a></li>
+	<li>String <a href="#removeHTML">removeHTML(String str)</a></li>
+	<li>String <a href="#format">format(String str)</a></li>
+	<li>String <a href="#toLower">toLower(String str)</a></li>
+	<li>String <a href="#toUpper">toUpper(String str)</a></li>
+	<li>String <a href="#on16">on16(String str)</a></li>
+	<li>String <a href="#un16">un16(String str)</a></li>
+</ul>
+</div>
+<dl>
+	<dt id="trim">String <a href="#trim">trim(String str)</a></dt>
+    <dd>
+    <p>同时去除字符串两端的空格</p>
+    <p>如："a"+$String.trim("&nbsp;&nbsp;test&nbsp;&nbsp;&nbsp;")+"a";   //"atesta"</p>
+    </dd>
+	<dt id="escapeHTML">String <a href="#escapeHTML">escapeHTML(String str)</a></dt>
+    <dd>格式化HTML 如 $String.escapeHTML("&lt;"); //&amp;lt; </dd>
+	<dt id="unescapeHTML">String <a href="#unescapeHTML">unescapeHTML(String str)</a></dt>
+    <dd>反格式化HTML 如 $String.escapeHTML("&amp;lt"); //&lt; </dd>
+	<dt id="byteLength">Nunmber <a href="#byteLength">byteLength(String str)</a></dt>
+    <dd>取得字符的字节长度，汉字认为是两个字符</dd>
+	<dt id="delLast">String <a href="#delLast">delLast(String str)</a></dt>
+    <dd>除去最后一个字符</dd>
+	<dt id="toInt">Nunmber <a href="#toInt">toInt(String str)</a></dt>
+    <dd>转换成整型数字</dd>
+	<dt id="toArray">Array <a href="#toArray">toArray(String str,[String split])</a></dt>
+    <dd>转换成数组</dd>
+	<dt id="left">String <a href="#left">left(String str,Int n)</a></dt>
+    <dd>取左边多少字符，中文两个字节</dd>
+	<dt id="right">String <a href="#right">right(String str,Int n)</a></dt>
+    <dd>取右边多少字符，中文两个字节</dd>
+	<dt id="removeHTML">String <a href="#removeHTML">removeHTML(String str)</a></dt>
+    <dd>除去HTML标签</dd>
+	<dt id="format">String <a href="#format">format(String str)</a></dt>
+    <dd>模版函数 如： $String.format("&lt;div&gt;{0}&lt;/div&gt;{1}","test1","test2");  // &lt;div&gt;test1&lt;/div&gt;test2</dd>
+	<dt id="toLower">String <a href="#toLower">toLower(String str)</a></dt>
+    <dd>将字符串类所有字母转换为小写</dd>
+	<dt id="toUpper">String <a href="#toUpper">toUpper(String str)</a></dt>
+    <dd>将字符串类所有字母转换为大写</dd>
+	<dt id="on16">String <a href="#on16">on16(String str)</a></dt>
+    <dd>将字符串转换成16进制表示</dd>
+	<dt id="un16">String <a href="#un16">un16(Stringstr)</a></dt>
+    <dd>对escape()函数处理的字符串解码</dd>
+</dl>
+
+
+</div>

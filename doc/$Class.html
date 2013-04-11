@@ -1,0 +1,92 @@
+<div class="entry method" id="css1">
+<h2 class="title">
+<span class="name">$Class 对象</span>
+</h2>
+
+<div class="">
+<p class="desc"><strong>介绍： 简化增强面向对象构建</strong></p>
+<p class="desc"><strong>方法：</strong></p>
+<ul>
+	<li>Function(class) <a href="#create">create(Object obj)</a></li>
+	<li>Function(class) <a href="#inherit">inherit(Function(class) source,Object exts)</a></li>
+	<li>Function(class) <a href="#include">include(Function(class) cls, Object fns)</a></li>
+	<li>void[String] <a href="#dump">dump(mix m,Boolen alt)</a></li>
+</ul>
+</div>
+<dl>
+	<dt id="create">Function(class) <a href="#create">create(Object obj)</a></dt>
+    <dd><p>构建一个类。</p>
+    <p>
+    <pre><code>
+var man  = $Class.create({
+	//构造方法
+	__:function(m){
+        this.type = m||"tangoboy";
+        
+        //私有属性
+        var money = 100;
+        //私有方法
+        function buy(){
+        
+        }
+        this.getmoney = function(){
+            return this.money;
+        } 
+    },
+    //共有属性
+    sex:"男",
+    //共有方法
+    showtype:function(){alert(this.type);}
+});
+
+var m = new man("abc");
+
+    </code></pre>
+    </p>
+    </dd>
+	<dt id="inherit">Function(class) <a href="#inherit">inherit(Function(class) source,Object exts)</a></dt>
+    <dd><p>继承一个类。</p>
+        <p>
+    <pre><code>
+var boy = $Class.inherit(man);
+
+//or
+
+var boy = $Class.inherit(man,{
+    __:function(m){
+        this.type = m||"tangoboy";
+        
+        //私有属性
+        var money = 500;
+        this.boygetmoney = function(){
+            alert(money);
+        } 
+    },alse:function(){alert(this.sex);}
+});
+    </code></pre>
+    </dd>
+	<dt id="include">Function(class) <a href="#include">include(Function(class) cls, Object fns)</a></dt>
+    <dd><p>包含，添加原型成员。<p>
+    <p>
+	<pre><code>
+var run = function(){
+	alert("run");
+}
+var jump = function(){
+	alert("jump");
+}
+$Class.include(boy,{"run":run,"jump":jump});
+    </code></pre>
+</p>
+    </dd>
+    <dt id="dump">void[String] <a href="#dump">dump(mix m,Boolen alt)</a></dt>
+    <dd><p>对象检测，类似于php的print_r()。</p>
+    <p>
+	<pre><code>
+    var b = {a:1,c:'3'}; 
+    $Class.dump(b,true);
+    </code></pre>
+</p>
+    </dd>
+</dl>
+</div>
